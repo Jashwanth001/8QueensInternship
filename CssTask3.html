@@ -1,0 +1,174 @@
+<html>
+    <head>
+        <title>Css Task 3</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+    <style>
+        body{
+            background: url('nature.jpg');
+            background-size: cover;
+            box-sizing: border-box;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        .menu{
+            background-color: black;
+            text-align: center;
+        }
+        .menu ul{
+            list-style: none;
+            display: inline-flex;
+        }
+        .menu ul li{
+            width: 140px;
+            margin: 10px;
+            padding: 10px;
+        }
+        .menu ul li a{
+            text-decoration: none;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+        }
+        .home, .menu ul li:hover{
+            background-color: red;
+            border-radius: 5px;
+        }
+        .sub-menu{
+            display: none;
+        }
+        .menu ul li:hover .sub-menu{
+            display: block;
+            position: absolute;
+            background: red;
+            margin-top: 15px;
+            margin-left: -15px;
+        }
+        .menu ul li:hover .sub-menu ul{
+            display: block;
+            width: 200px;
+            margin: 10px; 
+        }
+        .menu ul li:hover .sub-menu ul li{
+            width: 105px;
+            background: transparent;
+            border-bottom: 1px solid #fff;
+            text-align: left;
+            border-radius: 0;
+        }
+        .menu ul li:hover .sub-menu ul li:last-child{
+            border-bottom: none;
+        }
+        .menu ul li:hover .sub-menu ul li a:hover{
+            color: white;
+            font-weight: bold;
+        }
+        .float{
+            float: right;
+            margin-top: -15px;
+            margin-left: -60px;
+        }
+        .sub-menu2{
+            display: none;
+        }
+        .hover-me:hover .sub-menu2{
+            position: absolute;
+            display: block;
+            margin-top: -40px;
+            margin-left: 140px;
+            background: red;
+        }
+        .hover-me li{
+            color: #fff;
+        }
+    </style>
+    <body>
+        <div class="menu">
+            <ul>
+                <li class="home"><a href=""><ion-icon name="home-outline"></ion-icon>Home</a></li>
+                <li class=""><a href=""><ion-icon name="body-outline"></ion-icon>About Us</a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Vision</a></li>
+                            <li><a href="#">Team</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class=""><a href=""><ion-icon name="build-outline"></ion-icon>Services</a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="#">Mobile Development</a></li>
+                            <li class="hover-me"><a href="#">Web Development</a><div class="float"><ion-icon name="arrow-forward-outline"></ion-icon></div>
+                                <div class="sub-menu2">
+                                    <ul>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>Javascript</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Cloud Computing</a><ion-icon name="arrow-forward-outline"></ion-icon>
+                                <div class="sub-menu2">
+                                    <ul>
+                                        <li>AWS</li>
+                                        <li>Azure</li>
+                                        <li>Google Drive</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class=""><a href=""><ion-icon name="people-outline"></ion-icon>Clients</a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Vision</a></li>
+                            <li><a href="#">Team</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class=""><a href=""><ion-icon name="stats-chart-outline"></ion-icon>Investers</a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Vision</a></li>
+                            <li><a href="#">Team</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class=""><a href=""><ion-icon name="logo-usd"></ion-icon>Pricing</a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Vision</a></li>
+                            <li><a href="#">Team</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class=""><a href=""><ion-icon name="desktop-outline"></ion-icon>Training</a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Vision</a></li>
+                            <li><a href="#">Team</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class=""><a href=""><ion-icon name="call-outline"></ion-icon>Contact</a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Vision</a></li>
+                            <li><a href="#">Team</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>        
+    </body>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

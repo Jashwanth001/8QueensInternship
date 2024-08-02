@@ -1,0 +1,159 @@
+<!--<html>
+    <head>
+        <title>Exercise</title>
+    </head>
+    <style>
+        body{
+            margin: 0;
+        }
+        h1{
+            position: relative;
+            width: max-content;
+        }
+        h1::after{
+            content: '';
+            background: linear-gradient(to right,red,blue);
+            height: 4px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+        h1:hover::after{
+            width: 0;
+        }
+        button{
+            padding: 1rem 3rem;
+            background: linear-gradient(to right,pink,yellow);
+            border-radius: 5px;
+            position: relative;
+            font-weight: 600;
+            border: none;
+            color: black;
+            z-index: 0;
+            cursor: pointer;
+        }
+        button::after{
+            background: linear-gradient(to right,red,blue);
+            position: absolute;
+            content: '';
+            width: 0px;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            height: 100%;
+            transition: 150ms ease-in-out;
+            border-radius: 5px;
+        }
+        button:hover::after{
+            width: 100%;
+        }
+    </style>
+    <body>
+        <h1>Hello World</h1>
+        <button>
+            Hover Me!
+        </button>
+    </body>
+</html>
+<html>
+    <head>
+        <title>Hello</title>
+    </head>
+    <style>
+        .one{
+            flex: 0 0 25%;
+        }
+        .two{
+            flex: 0 0 50%;
+        }
+        .three{
+            flex: 0 0 25%;
+        }
+    </style>
+    <body>
+        <div class="one">
+            <p>I am Jashwanth</p>
+        </div>
+        <div class="two">
+            <p>Kumar</p>
+        </div>
+        <div class="three">
+            <p>Male</p>
+        </div>
+    </body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  column-gap: 50px;
+  grid-template-columns: auto auto auto;
+  background-color: white;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+    <img src="pic.png">
+    <div class="first">
+        <p>Sammy's Mindchirps</p>
+    </div>
+<div class="grid-container">
+  <div class="grid-item">
+    <div class="second">
+        <p>Review of the movie Lover directed by Prabhuram Vyas</p>
+    </div>
+    <div class="third">
+        <img src="lover.png">
+        <p>Love is an emotion that has always intrigued me. It is loaded with lot of 
+           contrarian feelings- you need the person you love to be possessive about
+           you yet you need your space; you need that person to respect your thoughts
+           and let you do things on your own course yet you want that person to offer 
+           their unsolicited views, and I could go on and on about how this universal 
+           feeling called "LOVE" is so unfathomable and complex. Perhaps, this is why, 
+           no matter how many movies are made around the central theme of love, new 
+           ones with fresher perspective like "Lover" still are celebrated by the audience.<br></p>
+    </div>
+  </div>
+  <div class="grid-item"></div>  
+  <div class="grid-item"></div>
+  <div class="grid-item">
+    <div class="second">
+        <p>Review of the movie Lover directed by Prabhuram Vyas</p>
+    </div>
+    <div class="third">
+        <img src="lover.png">
+        <p>Love is an emotion that has always intrigued me. It is loaded with lot of 
+           contrarian feelings- you need the person you love to be possessive about
+           you yet you need your space; you need that person to respect your thoughts
+           and let you do things on your own course yet you want that person to offer 
+           their unsolicited views, and I could go on and on about how this universal 
+           feeling called "LOVE" is so unfathomable and complex. Perhaps, this is why, 
+           no matter how many movies are made around the central theme of love, new 
+           ones with fresher perspective like "Lover" still are celebrated by the audience.<br></p>
+    </div>
+  </div>
+  <div class="grid-item"></div>  
+  <div class="grid-item"></div>
+  <div class="grid-item">8</div>
+  <div class="grid-item"></div>  
+</div>
+
+</body>
+</html>
+
+

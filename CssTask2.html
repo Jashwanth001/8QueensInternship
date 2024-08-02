@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <title>Css Task 2</title>
+    </head>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: url('coffee.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: sans-serif;
+            color: white;
+        }
+        .all{
+            position: absolute;
+            width: 350px;
+            height: 400px;
+            top: 50%;
+            left: 53%;
+            transform: translate(-50%,-50%);
+            border-radius: 10px;
+            background: black;
+
+        }
+        .all h1{
+            text-align: center;
+            padding: 0 0 20px 0;
+            border-bottom: 1px solid silver;
+        }
+        .all form{
+            padding: 0 40px;
+            box-sizing: border-box;
+        }
+        form .two{
+            position: relative;
+            border-bottom: 2px solid #adadad;
+            margin: 30px 0;
+        }
+        .two input{
+            width: 100%;
+            padding: 0 10px;
+            height: 60px;
+            font-size: 16px;
+            border: none;
+            background: none;
+            outline: none;
+            font-weight: bold;
+        }
+        .two label{
+            position: absolute;
+            color: white;
+            padding: 0 10px;
+            font-weight: bold;
+            top: 24%;
+            left: 5px;
+            font-size: 16px;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+        .hi label{
+            top: 40%;
+        }
+        .two{
+            color: white;
+            font-size: 16px;
+        }
+        .four{
+            color: grey;
+            font-size: 16px;
+            margin: -5px 0 25px 5px;
+        }
+        .four:hover{
+            text-decoration: underline;
+            cursor: pointer;
+
+        }
+        input[type="submit"]{
+            margin-left: 55px;
+            width: 70%;
+            height: 30px;
+            border-radius: 25px;
+            border: 1px solid;
+            background: red;
+            font-size: 18px;
+            color: aliceblue;
+            font-weight: 700;
+        }
+        input[type="submit"]:hover{
+            cursor: pointer;
+        }
+        .five{
+            color: grey;
+            font-size: 16px;
+            margin: -5px 0 25px 5px;
+        }
+        .five:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+    <body>
+        <div class="all">
+            <h1>Login Here</h1>
+            <div class="two">
+                <input type="text" placeholder="Enter Username">
+                <label>Username</label>
+            </div>
+            <div class="two">
+                <input type="password" placeholder="Enter Password">
+                <div class="hi">
+                    <label>Password</label>
+                </div>
+            </div>
+            <div class="three">
+                <input type="submit" value="Login">
+            </div>
+            <div class="four">
+                <p>Lost Your Password ?</p>
+            </div>
+            <div class="five">
+                <p>Don't have an Account ?</p>
+            </div>
+        </div>
+    </body>
+</html>
