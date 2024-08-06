@@ -1,16 +1,27 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>JS</title>
-        <script src="script.js"></script>
     </head>
     <body>
-        <h1 id="demo">Hello World</h1>
-        <button id="btn">Change</button>
+        <h1>Guess the Number from 1 to 10</h1>
+        <input type = "number" id="num">
+        <button onclick="guessNumber()">Check</button>
         <script>
-            var sample = document.getElementById("demo");
-            console.log(sample.textContent);
-            var button = document.getElementById("demo");
-            sample.textContent = "Bye"
+
+            var a = Math.random();
+            var result = console.log(Math.floor(a*10)+1);
+            var b = document.getElementById("num");
+
+            if(b == a){
+                alert("Yes you are Guessed Correctly")
+            }
+            else{
+                for(var i = 0; i < 10;i++){
+                    console.log("You are Wrong")
+                    console.log("Your Score:"+ i--)
+            }
+        }  
         </script>
     </body>
 </html>

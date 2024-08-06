@@ -168,4 +168,7 @@
 //     console.log(count)
 // }
 
-
+        // Random Number Generator
+        
+        var a = Math.random();
+        console.log(Math.floor(a*10)+1);
