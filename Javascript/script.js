@@ -66,21 +66,106 @@
 //     console.log("Enjoy the sunshine")
 // }
 
-let rain = true
+// let rain = true
 
-if(true){
-    console.log("Rainly")
-}
-else{
-    console.log("enjoy the rain")
-}
+// if(true){
+//     console.log("Rainly")
+// }
+// else{
+//     console.log("enjoy the rain")
+// }
 
 
-let work = true
+// let work = true
 
-if(true){
-    console.log("Great Job")
-}
-else{
-    console.log("Finish your work")
-}
+// if(true){
+//     console.log("Great Job")
+// }
+// else{
+//     console.log("Finish your work")
+// }
+
+// let color = 'red'
+// // let color2 = yellow
+// // let color3 = green
+// if(color == 'red'){
+//     console.log("Stop")
+// }
+// else if(color == 'yellow'){
+//     console.log("Get Ready")
+// }
+// else{
+//     console.log("Go")
+// }
+
+// let season = 'autumn'
+
+// if(season == 'spring'){
+//     console.log("Enjoy the blooming")
+// }
+
+// if(season == 'summer'){
+//     console.log("Have fun")
+// }
+
+// if(season == 'autumn'){
+//     console.log("Admire the colorfull")
+// }
+
+// if(season == 'winter'){
+//     console.log("Bundle up and stay warm")
+// }
+
+// let score = 90
+
+// // if condition
+
+// if(score<=50){
+//     console.log("You Need to improve")
+// }
+
+// else if(score >=50 && score<=70){
+//     console.log("Good Job")
+// }
+
+// else if(score>=70){
+//     console.log("Excellent Performance")
+// }
+// else{
+//     console.log("Invalid Score")
+// }
+
+// let number = 10;
+
+// if(number%2==0){
+//     console.log("Even")
+// }
+// else{
+//     console.log("Odd")
+// }
+
+// let character = 'a'
+
+// if (character== 'a' && 'e' && 'i' && 'o' && 'u'){
+//     console.log("Vowel")
+// }
+// else{
+//     console.log("Consonant")
+// }
+
+// for( count = 0; count<=10; count=count+2){
+//     console.log(count)
+// }
+
+// for( count = 1; count<=10; count=count+1){
+//     if(count%2==0){
+//         console.log(count)
+//     }
+// }
+
+// for (i = 0;i<=10; i++){
+//     count = i  + " X " + "2" + "=" +i*2;
+//     console.log(count)
+// }
+
+

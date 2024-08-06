@@ -4,11 +4,13 @@
         <script src="script.js"></script>
     </head>
     <body>
-        <form>
-            <label>Price</label>
-            <input type="number" name="js" placeholder="Enter the price" id="script">
-            <input type="submit" id="script">
-        </form>
-    
+        <h1 id="demo">Hello World</h1>
+        <button id="btn">Change</button>
+        <script>
+            var sample = document.getElementById("demo");
+            console.log(sample.textContent);
+            var button = document.getElementById("demo");
+            sample.textContent = "Bye"
+        </script>
     </body>
 </html>
