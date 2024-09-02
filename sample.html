@@ -1,0 +1,484 @@
+<!-- <html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <input type="text" id="input" onkeyup="submit()">
+        <button onclick="submit()">Submit</button>
+        <h1 id="demo"></h1>
+    </body>
+    <script>
+        var text = document.getElementById('input');
+        function submit(){
+            var result = text.value;
+            document.getElementById('demo').innerHTML = result;
+        }
+    </script>
+</html> -->
+
+<!-- <html>
+    <body>
+        <button onclick="submit()">Add</button>
+        <div id="result"></div>
+    
+    <script>
+         var output = document.getElementById('result')
+        function submit(){
+           
+            var item = document.createElement('h1')
+            item.textContent = 'Hello'
+            output.appendChild(item)
+        }
+    </script>
+    </body>
+</html> -->
+
+<!-- <html>
+    <head></head>
+    <body>
+        <button id="red" onclick="change()">Change Color</button>
+        <script>
+            function change(){
+                var clr = document.getElementById('red').style.backgroundColor = 'red'
+            }
+        </script>
+    </body>
+</html> -->
+
+<!-- <html>
+    <head>
+    </head>
+    <body>
+        <h1 id="text">Name</h1>
+        <button id="btnone" onclick="one()">Jashwanth</button>
+        <button id="btntwo" onclick="two()">Kumar</button>
+        <button id="btnthree" onclick="three()">Attacker</button>
+        <script>
+            var btn = document.getElementById('text')
+            function one(){
+                var name = document.getElementById('btnone').innerHTML;
+                btn.textContent = name;
+            }
+
+            function two(){
+                var name1 = document.getElementById('btntwo').innerHTML;
+                btn.textContent = name1;
+            }
+
+            function three(){
+                var name2 = document.getElementById('btnthree').innerHTML;
+                btn.textContent = name2;
+            }
+        </script>
+    </body>
+</html> -->
+
+<!-- <h1  onclick="change(event)">One</h1>
+<h1  onclick="change(event)">Two</h1>
+<h1  onclick="change(event)">Three</h1>
+<h1  onclick="change(event)">Four</h1>
+<h1  onclick="change(event)">Five</h1>
+<h1  onclick="change(event)">six</h1>
+<h1  onclick="change(event)">Seven</h1>
+<script>
+
+    function change(event){
+        event.target.remove();
+    }
+</script> -->
+
+<!--  
+<input type="text" id="input">
+<button onclick="add()">Add</button>
+
+<ul id="todo">
+    <li>Hello <button onclick="Delete(event)">Delete</button></li>
+</ul>
+
+<script>
+    var list = document.getElementById('todo')
+    var input = document.getElementById('input')
+    function add(){
+      var listitem = document.createElement('li')
+      listitem.innerHTML = input.value + "<button onclick='Delete(event)'>Delete</button>"
+      list.appendChild(listitem)
+    }
+
+    function Delete(event){
+        event.target.parentElement.remove()
+    }
+</script> -->
+<!-- <style>
+    form {
+        position: relative;
+        top: 5%;
+        padding-left: 43%;
+    }
+    h1 {
+        text-align: center;
+    }
+    form input {
+        margin: 10px;
+    }
+    button {
+        background-color: aqua;
+        margin-left: 10%;
+    }
+    table {
+        margin-top: 10%;
+        margin-left: 25%;
+    }
+    th {
+        padding: 20px;
+    }
+</style>
+
+<h1>Student Form</h1>
+<form onsubmit="submitForm(event)">
+    Name: <input type="text" id="name" required><br>
+    Age: <input type="number" id="age" required><br>
+    Gender: 
+    <input type="radio" name="gender" value="Male" id="male">Male 
+    <input type="radio" name="gender" value="Female" id="female"> Female<br>
+    Course: 
+    <select id="course" required>
+        <option>Java</option>
+        <option>C</option>
+        <option>C++</option>
+        <option>Python</option>
+    </select><br>
+    Email: <input type="email" id="email" required><br>
+    <button type="submit">Save</button>
+</form>
+
+<table border="1px solid black" id="table">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Course</th>
+        <th>Email</th>
+        <th>Action</th>
+    </tr>
+</table>
+
+<script>
+    function submitForm(event) {
+        event.preventDefault();
+
+        var name = document.getElementById('name').value;
+        var age = document.getElementById('age').value;
+        var gender = document.querySelector('input[name="gender"]:checked').value;
+        var course = document.getElementById('course').value;
+        var email = document.getElementById('email').value;
+
+        var table = document.getElementById('table');
+        var newRow = table.insertRow();
+
+        newRow.innerHTML = `
+            <td>${name}</td>
+            <td>${age}</td>
+            <td>${gender}</td>
+            <td>${course}</td>
+            <td>${email}</td>
+            <td><button onclick="deleteRow(this)">Delete</button></td>
+        `;
+    }
+
+    function deleteRow(button) {
+        var row = button.parentNode.parentNode;
+        row.parentNode.removeChild(row);
+    }
+</script> -->
+<!-- <style>
+    .overlay{
+        background-color: black;
+        width: 100%;
+        height: 100vh;
+        top: 0px;
+        left: 0px;
+        position: absolute;
+        opacity: 0.8;
+        z-index: 1;
+        display: none;
+    }
+    .popupbox{
+        background-color: white;
+        color: black;
+        width: 30%;
+        position: absolute;
+        left: 30%;
+        border-radius: 10px;
+        padding: 20px;
+        z-index: 3;
+        display: none;
+    }
+</style>
+<button id="btn">Show</button>
+<div class="overlay"></div>
+<div class="popupbox">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi illum exercitationem magni molestiae quae totam autem voluptas necessitatibus perferendis, ab laudantium fugiat! Iste consequatur neque suscipit quas eveniet adipisci officiis?</p>
+    <button id="close">Close</button>
+</div>
+
+<script>
+    var overlay = document.querySelector('.overlay')
+    var popupbox = document.querySelector('.popupbox')
+    var btn = document.getElementById('btn')
+    var close = document.getElementById('close')
+    
+    btn.addEventListener('click',function(){
+        popupbox.style.display = 'block'
+        overlay.style.display = 'block'
+    })
+
+    close.addEventListener('click',function(){
+        popupbox.style.display = 'none'
+        overlay.style.display = 'none'
+    })
+
+    btn.addEventListener('mouseover',function(){
+        popupbox.style.display = 'block'
+        overlay.style.display = 'block'
+    })
+
+    close.addEventListener('mouseover',function(){
+        popupbox.style.display = 'none'
+        overlay.style.display = 'none'
+    })
+</script> -->
+<head>
+    <style>
+        .head {
+            background-color: rgb(234, 92, 92);
+            width: 100%;
+            height: 10%;
+            position: absolute;
+            top: 0px;
+            left: 0;
+        }
+
+        .head p {
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: 0;
+            margin-left: 5px;
+        }
+
+        .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            position: absolute;
+            top: 15%;
+            left: 5%;
+            width: 90%;
+        }
+
+        .container {
+            background-color: black;
+            width: 25%;
+            height: auto;
+            margin: 10px;
+            color: white;
+            border-radius: 10px;
+            padding: 10px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .container button {
+            background-color: rgb(234, 92, 92);
+            color: black;
+            border-radius: 10px;
+            padding: 5px;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .container h2 {
+            color: rgb(234, 92, 92);
+        }
+
+        .circle button {
+            background-color: rgb(234, 92, 92);
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            border-radius: 50%;
+            border: 1px solid white;
+            font-size: 30px;
+            cursor: pointer;
+            margin-right: 30px;
+            margin-bottom: 20px;
+        }
+
+        .fa-solid {
+            right: 0;
+            bottom: 0;
+        }
+
+        .back {
+            background-color: black;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            opacity: 0.8;
+            display: none;
+            z-index: 1;
+        }
+
+        .add {
+            background-color: rgb(234, 92, 92);
+            width: 30%;
+            height: 45%;
+            position: relative;
+            top: 25%;
+            left: 35%;
+            border-radius: 10px;
+            padding: 20px;
+            display: none;
+            z-index: 2;
+        }
+
+        .add input {
+            background-color: transparent;
+            color: black;
+            margin: 5px;
+            border-bottom: 1px solid black;
+            width: 90%;
+            height: 15%;
+            border-radius: 5px;
+            border: none;
+            border-bottom: 1px solid black;
+        }
+
+        .add button {
+            background-color: black;
+            color: white;
+            padding: 8px;
+            font-size: 15px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add input::placeholder {
+            color: rgb(35, 20, 20);
+        }
+        textarea::placeholder {
+            color: rgb(35, 20, 20);
+        }
+        textarea {
+            width: 80%;
+            height: 20%;
+            background-color: rgb(234, 92, 92);
+            border: 2px solid rgb(35, 20, 20);
+            margin-left: 5px;
+            color: black;
+            margin-top: 10px;
+        }
+
+        .add h2 {
+            font-weight: bold;
+        }
+
+        .add input:focus {
+            outline: none;
+        }
+
+        .add textarea:focus {
+            outline: none;
+        }
+    </style>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="back"></div>
+    <div class="add">
+        <h2>Add Book</h2>
+        <form id="reset">
+            <input type="text" placeholder="Book Title" id="title" required><br>
+            <input type="text" placeholder="Book Author" id="author" required><br>
+            <textarea placeholder="Short Description...." id="textarea" required></textarea><br>
+            <button id="addbtn">Add</button>
+            <button id="Cancel">Cancel</button>
+            <button id="clear">Clear</button>
+        </form>
+    </div>
+    <div class="head">
+        <p>Booksky</p>
+    </div>
+    <div class="main-container">
+        <div class="container">
+            <div class="book-container">
+                <h2>Rich Dad Poor Dad</h2>
+                <p>Robert</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab impedit labore quos quo cupiditate atque, corrupti eaque temporibus. Ratione, blanditiis aliquam impedit veniam deserunt commodi repellendus soluta obcaecati dolorem placeat!</p>
+                <button onclick="Delete(event)">Delete</button>
+            </div>
+        </div>
+    </div>
+    <div class="circle">
+        <button id="btn"><i class="fa-solid fa-plus"></i></button>
+    </div>
+    <script>
+        var btn = document.getElementById('btn');
+        var addbook = document.querySelector('.add');
+        var back = document.querySelector('.back');
+        var cancel = document.getElementById('Cancel');
+        var clear = document.getElementById('clear')
+        var mainContainer = document.querySelector('.main-container');
+        var addbutton = document.getElementById('addbtn');
+        var reset = document.getElementById('reset')
+
+        btn.addEventListener('click', function () {
+            addbook.style.display = "block";
+            back.style.display = "block";
+        });
+
+        cancel.addEventListener('click', function (event) {
+            event.preventDefault();
+            addbook.style.display = "none";
+            back.style.display = "none";
+        });
+
+        clear.addEventListener('click',function(event){
+            event.preventDefault();
+            document.getElementById('title').value = '';
+            document.getElementById('author').value = '';
+            document.getElementById('textarea').value = '';
+        })
+
+        addbutton.addEventListener('click', function (event) {
+            event.preventDefault();
+            var booktitle = document.getElementById('title').value;
+            var bookauthor = document.getElementById('author').value;
+            var booktextarea = document.getElementById('textarea').value;
+
+            var div = document.createElement('div');
+            div.setAttribute('class', "container");
+            div.innerHTML = `<div class="book-container">
+                <h2>${booktitle}</h2>
+                <p>${bookauthor}</p>
+                <p>${booktextarea}</p>
+                <button onclick="Delete(event)">Delete</button>
+            </div>`;
+            mainContainer.appendChild(div);
+            addbook.style.display = "none";
+            back.style.display = "none";
+        });
+
+        function Delete(event) {
+            event.target.parentElement.parentElement.remove();
+        }
+    </script>
+</body>
